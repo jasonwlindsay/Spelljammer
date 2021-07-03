@@ -1,0 +1,185 @@
+<div class="main">
+  <div class="details section">
+    <h1 class="header-title">Spelljammer Ship Description</h1>
+    <!-- main details -->
+    <h2>Ship Details</h2>
+    <table class="data-table">
+      <tr>
+        <td class="table-header-large sheet-table-text-right">Ship Name</td>
+        <td><input type="text" name="attr_shipName" class="text-long" /></td>
+        <td>&nbsp;</td>
+        <td class="table-header-large sheet-table-text-right">Ship Model</td>
+        <td><input type="text" name="attr_shipModel" class="text-long" /></td>
+      </tr>
+    </table>
+    <!-- weight details -->
+    <h3>Dimensions</h3>
+    <table class="data-table">
+      <tr>
+        <td class="table-header sheet-table-text-right">Tonnage</td>
+        <td><input type="number" name="attr_tonnage" class="number-short" /></td>
+        <td>&nbsp;</td>
+        <td class="table-header sheet-table-text-right">Cargo Capacity</td>
+        <td><input type="number" name="attr_cargoCapacity" class="number-short" /></td>
+        <td class="table-header sheet-table-text-right">Min. Crew</td>
+        <td><input type="number" name="attr_minCrew" class="number-short" /></td>
+      </tr>
+      <tr>
+        <td class="table-header">Keel</td>
+        <td><input type="number" name="attr_keel" class="number-short" /></td>
+        <td>&nbsp;</td>
+        <td class="table-header">Beam</td>
+        <td><input type="number" name="attr_beam" class="number-short" /></td>
+        <td class="table-header">Max. Passengers</td>
+        <td><input type="number" name="attr_maxPass" class="number-short" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="skill section flex-col">
+    <h3>Ship Attributes</h3>
+    <table class="sheet-data-table">
+      <tr>
+        <td class="table-header-large">STR</td>
+        <td><input type="number" class="char-ability" /></td>
+        <td class="table-header-large">DEX</td>
+        <td><input type="number" class="char-ability" /></td>
+        <td class="table-header-large">CON</td>
+        <td><input type="number" class="char-ability" /></td>
+        <td class="table-header-large">WIS</td>
+        <td><input type="number" class="char-ability" /></td>
+        <td class="table-header-large">INT</td>
+        <td><input type="number" class="char-ability" /></td>
+        <td class="table-header-large">CHA</td>
+        <td><input type="number" class="char-ability" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="constr section">
+    <h3>Construction</h3>
+    <table class="sheet-data-table sheet-table-fixed-table">
+      <tr>
+        <td class="table-header">
+          Ship Material
+        </td>
+      </tr>
+      <tr></tr>
+        <td class="sheet-table-input-field">
+          <input type="text" name="attr_material" />
+        </td>
+      </tr>
+    </table>
+    <table class="sheet-data-table sheet-table-two-column">
+      <tr>
+        <td class="table-header">
+          Armor Class
+        </td>
+        <td>
+          <input type="number" name="attr_armorClass sheet-number-short" />
+        </td>
+      </tr>
+      <tr>
+        <td class="table-header">
+          Hull Points
+        </td>
+        <td>
+          <input type="number" name="attr_hullPoints sheet-number-short" />
+        </td>
+      </tr>
+      <tr>
+        <td class="table-header">
+          Hit Points
+        </td>
+        <td>
+          <input type="number" name="attr_hitPoints sheet-number-short" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="move section">
+    <h3>Movement</h3>
+    <table class="sheet-data-table">
+      <tr>
+        <td class="table-header">
+          Manuv. Class
+        </td>
+        <td>
+          <input type="text" name="attr_manuvClass" />
+        </td>
+      </tr>
+      <tr>
+        <td class="table-header">
+          Move Points
+        </td>
+        <td>
+          <input type="text" name="attr_movePoints" />
+        </td>
+      </tr>
+      <tr>
+        <td class="table-header">
+          Hull Points
+        </td>
+        <td>
+          <input type="text" name="attr_hullPoints" />
+        </td>
+      </tr>
+      <tr>
+        <td class="table-header">
+          Hit Points
+        </td>
+        <td>
+          <input type="text" name="attr_hitPoints" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="helm section">
+    <h3>Helm</h3>
+    <table class="sheet-data-table">
+      <tr>
+        <td class="table-header">
+          Description
+        </td>
+        <td>
+          <input type="text" name="attr_helmDescription" />
+        </td>
+      </tr>
+      <tr>
+        <td class="table-header">
+          Condition
+        </td>
+        <td>
+          <input type="text" name="attr_helmCondition" />
+        </td>
+      </tr>
+      <tr>
+        <td class="table-header">
+          Modifier
+        </td>
+        <td>
+          <input type="text" name="attr_helmModifier" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="arms section">
+    <h3>Armaments</h3>
+    <label>Char name: <input name="attr_character_name" type="text" /></label>
+  </div>
+  <div class="artif section">
+    <h3>Artifacts</h3>
+    <label>Char name: <input name="attr_character_name" type="text" /></label>
+  </div>
+  <div class="officer section">
+    <h3>Officers</h3>
+    <label>Char name: <input name="attr_character_name" type="text" /></label>
+  </div>
+  <div class="crew section">
+    <label>Crew</label>
+    <fieldset class="repeating_power">
+      <input name="attr_power" type="text" />
+    </fieldset>
+  </div>
+  <div class="footer flex-col">
+    <span>Generic copyright disclaimer</span>
+  </div>
+</div>
