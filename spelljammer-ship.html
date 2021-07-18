@@ -1,11 +1,11 @@
-<div class="main">
-  <div class="details section">
-    <h1 class="header-title">Spelljammer Ship Description</h1>
+<div class="sheet-main">
+  <div class="sheet-details section">
+    <h1 class="sheet-header-title">Spelljammer Ship Description</h1>
     <!-- main details -->
     <h2>Ship Details</h2>
-    <table class="data-table">
+    <table class="sheet-data-table">
       <tr>
-        <td class="table-header-large sheet-table-text-right">Ship Name</td>
+        <td class="sheet-table-header-large sheet-table-text-right">Ship Name</td>
         <td><input type="text" name="attr_shipName" class="text-long" /></td>
         <td>&nbsp;</td>
         <td class="table-header-large sheet-table-text-right">Ship Model</td>
@@ -14,15 +14,15 @@
     </table>
     <!-- weight details -->
     <h3>Dimensions</h3>
-    <table class="data-table">
+    <table class="sheet-data-table">
       <tr>
-        <td class="table-header sheet-table-text-right">Tonnage</td>
-        <td><input type="number" name="attr_tonnage" class="number-short" /></td>
+        <td class="sheet-table-header sheet-table-text-right">Tonnage</td>
+        <td><input type="number" name="attr_tonnage" class="sheet-number-short" /></td>
         <td>&nbsp;</td>
-        <td class="table-header sheet-table-text-right">Cargo Capacity</td>
-        <td><input type="number" name="attr_cargoCapacity" class="number-short" /></td>
-        <td class="table-header sheet-table-text-right">Min. Crew</td>
-        <td><input type="number" name="attr_minCrew" class="number-short" /></td>
+        <td class="sheet-table-header sheet-table-text-right">Cargo Capacity</td>
+        <td><input type="number" name="attr_cargoCapacity" class="sheet-number-short" /></td>
+        <td class="sheet-table-header sheet-table-text-right">Min. Crew</td>
+        <td><input type="number" name="attr_minCrew" class="sheet-number-short" /></td>
       </tr>
       <tr>
         <td class="table-header">Keel</td>
@@ -35,37 +35,49 @@
       </tr>
     </table>
   </div>
-  <div class="skill section flex-col">
+  <div class="sheet-skill section flex-col">
     <h3>Ship Attributes</h3>
     <table class="sheet-data-table">
       <tr>
         <td class="table-header-large">STR</td>
-        <td><input type="number" class="char-ability" /></td>
+        <td><input type="number" name="attr_STR" class="char-ability" /></td>
         <td class="table-header-large">DEX</td>
-        <td><input type="number" class="char-ability" /></td>
+        <td><input type="number" name="attr_DEX" class="char-ability" /></td>
         <td class="table-header-large">CON</td>
-        <td><input type="number" class="char-ability" /></td>
+        <td><input type="number" name="attr_CON" class="char-ability" /></td>
         <td class="table-header-large">WIS</td>
-        <td><input type="number" class="char-ability" /></td>
+        <td><input type="number" name="attr_WIS" class="char-ability" /></td>
         <td class="table-header-large">INT</td>
-        <td><input type="number" class="char-ability" /></td>
+        <td><input type="number" name="attr_INT" class="char-ability" /></td>
         <td class="table-header-large">CHA</td>
-        <td><input type="number" class="char-ability" /></td>
+        <td><input type="number" name="attr_CHA" class="char-ability" /></td>
       </tr>
     </table>
   </div>
-  <div class="constr section">
+  <div class="sheet-constr section">
     <h3>Construction</h3>
     <table class="sheet-data-table sheet-table-fixed-table">
       <tr>
-        <td class="table-header">
+        <td class="sheet-table-header">
           Ship Material
         </td>
       </tr>
       <tr></tr>
-        <td class="sheet-table-input-field">
-          <input type="text" name="attr_material" />
-        </td>
+      <td class="sheet-table-input-field">
+        <select name="attr_material">
+          <option selected value="none">None</option>
+          <option value="thinwood">Thin Wood</option>
+          <option value="bone">Bone</option>
+          <option value="leather">Leather</option>
+          <option value="thickwood">Thick Wood</option>
+          <option value="ceramic">Ceramic</option>
+          <option value="metal">Metals</option>
+          <option value="preciousmetal">Precious Metals</option>
+          <option value="preciousgems">Precious Gems</option>
+          <option value="crystal">Crystal</option>
+          <option value="earthenstone">Earthen/Stone</option>
+        </select>
+      </td>
       </tr>
     </table>
     <table class="sheet-data-table sheet-table-two-column">
@@ -74,7 +86,7 @@
           Armor Class
         </td>
         <td>
-          <input type="number" name="attr_armorClass sheet-number-short" />
+          <input type="number" name="attr_armorClass" class="sheet-number-short" />
         </td>
       </tr>
       <tr>
@@ -82,7 +94,7 @@
           Hull Points
         </td>
         <td>
-          <input type="number" name="attr_hullPoints sheet-number-short" />
+          <input type="number" name="attr_hullPoints" class="sheet-number-short" />
         </td>
       </tr>
       <tr>
@@ -90,96 +102,156 @@
           Hit Points
         </td>
         <td>
-          <input type="number" name="attr_hitPoints sheet-number-short" />
+          <input type="number" name="attr_hitPoints" class="sheet-number-short" />
         </td>
       </tr>
     </table>
   </div>
-  <div class="move section">
+  <div class="sheet-move section">
     <h3>Movement</h3>
     <table class="sheet-data-table">
       <tr>
-        <td class="table-header">
+        <td class="sheet-table-header">
           Manuv. Class
         </td>
         <td>
-          <input type="text" name="attr_manuvClass" />
+          <select name="attr_move_manuvClass">
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+            <option value="d">D</option>
+            <option value="e">E</option>
+            <option selected value="f">F</option>
+          </select>
         </td>
       </tr>
       <tr>
-        <td class="table-header">
+        <td class="sheet-table-header">
           Move Points
         </td>
         <td>
-          <input type="text" name="attr_movePoints" />
+          <input type="text" name="attr_move_movePoints" class="sheet-number-short" />
         </td>
       </tr>
       <tr>
-        <td class="table-header">
-          Hull Points
+        <td class="sheet-table-header">
+          Turn Modifier
         </td>
         <td>
-          <input type="text" name="attr_hullPoints" />
+          <input type="text" name="attr_move_turnModifier" class="sheet-number-short" />
         </td>
       </tr>
       <tr>
-        <td class="table-header">
-          Hit Points
+        <td class="sheet-table-header">
+          Max. Turns Per Hex
         </td>
         <td>
-          <input type="text" name="attr_hitPoints" />
+          <input type="text" name="attr_move_maxTurnsPerHex" class="sheet-number-short" />
         </td>
       </tr>
     </table>
   </div>
-  <div class="helm section">
+  <div class="sheet-helm section">
     <h3>Helm</h3>
     <table class="sheet-data-table">
       <tr>
-        <td class="table-header">
+        <td class="sheet-table-header">
           Description
         </td>
         <td>
-          <input type="text" name="attr_helmDescription" />
+          <input type="text" name="attr_helm_description" />
         </td>
       </tr>
       <tr>
-        <td class="table-header">
+        <td class="sheet-table-header">
           Condition
         </td>
         <td>
-          <input type="text" name="attr_helmCondition" />
+          <input type="text" name="attr_helm_condition" />
         </td>
       </tr>
       <tr>
-        <td class="table-header">
+        <td class="sheet-table-header">
           Modifier
         </td>
         <td>
-          <input type="text" name="attr_helmModifier" />
+          <input type="text" name="attr_helm_modifier" />
+        </td>
+      </tr>
+      <tr>
+        <td class="sheet-table-header">
+          Special Properties
+        </td>
+        <td>
+          <textarea name="attr_helm_properties"></textarea>
         </td>
       </tr>
     </table>
   </div>
-  <div class="arms section">
+  <div class="sheet-arms section">
     <h3>Armaments</h3>
-    <label>Char name: <input name="attr_character_name" type="text" /></label>
+    <table>
+      <fieldset class="repeating_arms">
+        <span class="sheet-inline-container">
+          <span class="sheet-inline"><label>Size:
+              <select name="attr_arms_size" class="sheet-select-short">
+                <option selected name="Small">Small</option>
+                <option name="Medium">Medium</option>
+                <option name="Large">Large</option>
+              </select>
+            </label></span>
+          <span class="sheet-inline"><label>Name: <input name="attr_arms_name" type="text" /></label></span>
+          <span class="sheet-inline"><label>Atk: <input name="attr_atk_bonus" type="text"
+                class="sheet-text-short" /></label></span>
+          <span class="sheet-inline"><label>Dmg: <input name="attr_arms_dmg" type="text"
+                class="sheet-text-short" /></label></span>
+          <span class="sheet-inline"><label>Range: <input name="attr_arms_range" type="text"
+                class="sheet-text-short" /></label></span>
+        </span>
+      </fieldset>
   </div>
-  <div class="artif section">
+  <div class="sheet-artif section">
     <h3>Artifacts</h3>
-    <label>Char name: <input name="attr_character_name" type="text" /></label>
-  </div>
-  <div class="officer section">
-    <h3>Officers</h3>
-    <label>Char name: <input name="attr_character_name" type="text" /></label>
-  </div>
-  <div class="crew section">
-    <label>Crew</label>
-    <fieldset class="repeating_power">
-      <input name="attr_power" type="text" />
+    <fieldset class="repeating_arms">
+      <span class="sheet-inline-container">
+        <span class="sheet-inline"><label>Name: <input name="attr_artif_name" type="text" /></label></span>
+        <span class="sheet-inline"><label>Description: <input name="attr_artif_desc" type="text" /></label></span>
+      </span>
     </fieldset>
   </div>
-  <div class="footer flex-col">
-    <span>Generic copyright disclaimer</span>
+  <div class="sheet-officer section">
+    <h3>Officers</h3>
+    <fieldset class="repeating_officer">
+      <span class="sheet-inline-container">
+        <span class="sheet-inline"><label>Role:
+            <select name="attr_officer_role">
+              <option selected value="captain">Captain</option>
+              <option value="firstmate">First Mate</option>
+              <option value="helm">Helm Officer</option>
+              <option value="bosun">Bosun (Engineer)</option>
+              <option value="surgeon">Surgeon</option>
+            </select>
+          </label></span>
+        <span class="sheet-inline"><label>Officer Name: <input name="attr_officer_name" type="text" /></label></span>
+    </fieldset>
+  </div>
+  <div class="sheet-crew section">
+    <h3>Crew</h3>
+    <fieldset class="repeating_power">
+      <span class="sheet-inline-container">
+        <span class="sheet-inline"><label>Name:</label><input name="attr_crew_name" type="text" /></span>
+        <span class="sheet-inline"><label>Type:
+            <select name="attr_crew_type" class="sheet-select-short">
+              <option selected value="npc">NPC</option>
+              <option value="pc">Player</option>
+            </select>
+        </span>
+        <span class="sheet-inline"><label>Proficiency:</label><input name="attr_crew_profic" type="text"
+            class="sheet-text-short" /></span>
+        <span class="sheet-inline"><label>Station:</label><input name="attr_crew_station" type="text" /></span>
+    </fieldset>
+  </div>
+  <div class="sheet-footer flex-col">
+    <span>Copyright Jason Lindsay 2021</span>
   </div>
 </div>

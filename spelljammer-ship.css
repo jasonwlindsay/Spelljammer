@@ -8,7 +8,9 @@
   grid-template-areas:"details details details"
                       "skill   skill   skill"
                       "constr  move    helm"
-                      "arms    artif   officer"
+                      "arms    arms    arms"
+                      "artif   artif   artif"
+                      "officer officer officer"
                       "crew    crew    crew"
                       "footer  footer  footer";
 }
@@ -54,55 +56,77 @@ textarea {
   grid-area: move;
   background-color: lightsteelblue;
 }
+.sheet-helm {
+  grid-area: helm;
+}
+.sheet-arms {
+  grid-area: arms;
+  background-color: lightslategray;
+}
+.sheet-artif {
+  grid-area: artif;
+  background-color: lightgray;
+}
+.sheet-officer {
+  grid-area: officer;
+  background-color: lightsteelblue;
+}
+.sheet-crew {
+  grid-area: crew;
+}
 .sheet-footer {
   grid-area: footer;
   background-color: gray;
 }
 
+.sheet-inline-container:after {
+  content: "";
+  display: block;
+}
+.sheet-inline {
+  display: inline-block;
+}
+.sheet-text-short {
+  width:60px;
+}
 h1.sheet-header-title {
   margin-bottom: 15px;
 }
-
 .sheet-section-title {
   margin-bottom: 5px;
 }
 
-
 input.sheet-char-ability {
   width: 35px;
 }
-
 input.sheet-number-short {
   width:50px;
 }
 input.sheet-text-long {
   width:100%;
 }
+select.sheet-select-short {
+  width:70px;
+}
 
 table.sheet-data-table {
   width:95%;
 }
-
 table.sheet-table-fixed {
   table-layout: fixed;
 }
-
 table.sheet-table-two-column {
   table-layout: fixed;
 }
-
 table.sheet-table-two-column td {
   width:50%;
 }
-
-
 td.sheet-table-header-large {
   font-size: 1.2em;
   font-weight: bold;
   text-align: right;
   padding-right: 5px;
 }
-
 td.sheet-table-header {
   font-size: 1em;
   font-weight: bold;
@@ -111,14 +135,10 @@ td.sheet-table-header {
 td.sheet-table-text-right {
   text-align: right;
 }
-
 td.sheet-two-column {
   width:40%;
 }
-
 td.sheet-table-input-field {
   width:40%;
   overflow: hidden;
 }
-
-
